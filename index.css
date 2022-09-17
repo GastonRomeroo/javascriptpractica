@@ -5,7 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu';
-    background-color: rgb(0, 0, 0);
+    background-image: url(./img/1663196678953.png);
+    background-repeat: space;
 }
 
 .text-title {    

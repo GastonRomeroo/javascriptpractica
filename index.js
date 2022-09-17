@@ -15,6 +15,7 @@ let precio4 = `65.30`;
 let seleccion1 = "";
 let seleccion2 = "";
 let confirmacionCompra = prompt("Desea realizar una compra?");
+let resultado = seleccion1 * seleccion2;
 
 while( confirmacionCompra== `si` || confirmacionCompra ==`no`|| confirmacionCompra==``){
     if(confirmacionCompra==`si`){
@@ -23,12 +24,20 @@ while( confirmacionCompra== `si` || confirmacionCompra ==`no`|| confirmacionComp
             switch(seleccion1){
                 case 1:
                     seleccion2 = parseInt(prompt(`Usted seleccionó: \n` + productoA + ` Que tiene un valor de: $`+ precio1 + "\n Que cantidad desea?"));
+                    alert(`La suma total es de $`+resultado);
+                    break;
                 case 2:
                     seleccion2 = parseInt(prompt(`Usted seleccionó` + productoB + ` Que tiene un valor de: $`+ precio2 + "\n Que cantidad desea?"));
+                    alert(`La suma total es de $`+resultado);
+                    break;
                 case 3:
                     seleccion2 = parseInt(prompt(`Usted seleccionó` + productoC + ` Que tiene un valor de: $`+ precio3 + "\n Que cantidad desea?"));
+                    alert(`La suma total es de $`+resultado);
+                    break;
                 case 4:
                     seleccion2 = parseInt(prompt(`Usted seleccionó` + productoD + ` Que tiene un valor de: $`+ precio4 + "\n Que cantidad desea?"));
+                    alert(`La suma total es de $`+resultado);
+                    break;
     }
 }
     }
@@ -41,4 +50,8 @@ while( confirmacionCompra== `si` || confirmacionCompra ==`no`|| confirmacionComp
     confirmacionCompra = prompt("Desea realizar una compra?");
     }
 }
+
+
+
 }
+
