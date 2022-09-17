@@ -8,14 +8,15 @@ let productoA = `Interruptor termomagnetico 2 x 20A 6Ka`;
 let productoB = `Interruptor diferencial 2 x 40A 30mA tipo ac`;
 let productoC = `Caja 4 polos exterior IP55 PVC`;
 let productoD = `Cable unipolar antillama normailizado 2,5mm`;
-let precio1 = `1.200`;
-let precio2 = `4.300`;
+let precio1 = `1,200`;
+let precio2 = `4,300`;
 let precio3 = `860`;
-let precio4 = `65.30`;
+let precio4 = `65,30`;
 let seleccion1 = "";
 let seleccion2 = "";
 let confirmacionCompra = prompt("Desea realizar una compra?");
-let resultado = seleccion1 * seleccion2;
+let resultado = "";
+
 
 while( confirmacionCompra== `si` || confirmacionCompra ==`no`|| confirmacionCompra==``){
     if(confirmacionCompra==`si`){
@@ -24,20 +25,16 @@ while( confirmacionCompra== `si` || confirmacionCompra ==`no`|| confirmacionComp
             switch(seleccion1){
                 case 1:
                     seleccion2 = parseInt(prompt(`Usted seleccionó: \n` + productoA + ` Que tiene un valor de: $`+ precio1 + "\n Que cantidad desea?"));
-                    alert(`La suma total es de $`+resultado);
-                    break;
+                    alert(`La suma total es de $` + (precio1 * seleccion2));
                 case 2:
                     seleccion2 = parseInt(prompt(`Usted seleccionó` + productoB + ` Que tiene un valor de: $`+ precio2 + "\n Que cantidad desea?"));
-                    alert(`La suma total es de $`+resultado);
-                    break;
+                    alert(`La suma total es de $`);
                 case 3:
                     seleccion2 = parseInt(prompt(`Usted seleccionó` + productoC + ` Que tiene un valor de: $`+ precio3 + "\n Que cantidad desea?"));
-                    alert(`La suma total es de $`+resultado);
-                    break;
+                    alert(`La suma total es de $`);
                 case 4:
                     seleccion2 = parseInt(prompt(`Usted seleccionó` + productoD + ` Que tiene un valor de: $`+ precio4 + "\n Que cantidad desea?"));
-                    alert(`La suma total es de $`+resultado);
-                    break;
+                    alert(`La suma total es de $`);
     }
 }
     }
@@ -50,7 +47,9 @@ while( confirmacionCompra== `si` || confirmacionCompra ==`no`|| confirmacionComp
     confirmacionCompra = prompt("Desea realizar una compra?");
     }
 }
-
+function multiplicacion(seleccion1,seleccion2) {
+    let resultado = seleccion1 * seleccion2 ;  
+}
 
 
 }
