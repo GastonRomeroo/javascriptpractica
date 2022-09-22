@@ -1,15 +1,12 @@
 function tienda() {
 
-    function Producto(id,nombre,precio,stock,iva, multiplicacion, seleccion2){
+    function Producto(id,nombre,precio,stock,iva){
         this.id = parseInt(id);
         this.nombre = nombre.toUpperCase();
         this.precio = parseFloat(precio);
         this.stock = parseFloat(stock);
         this.iva = parseFloat(iva);
         this.detalle = this.id +`__ `+ this.nombre +` con un valor de$`+ this.precio +` contamos con un stock de: ` + this.stock;
-        this.seleccion2 = parseInt();
-        this.multiplicacion = this.precio * this.seleccion2;
-
     }
 
 
@@ -19,7 +16,7 @@ function tienda() {
     const producto4 = new Producto(`4`,`Mochila Bamboo Adventure 70 Lts`,45000,5300,1.21);
 
 
-let consultaCompra = prompt("Desea realizar una compra?").toLocaleLowerCase();
+let consultaCompra = prompt("Desea realizar una compra?");
 let = seleccion1 = ``;
 
 
@@ -32,28 +29,20 @@ if(consultaCompra ==`si`){
     alert("Muchas gracias por su compra");
 }
 
-while(seleccion1){
-    switch(seleccion1){
-        case 1: producto1.seleccion2 = prompt("Usted selecciono: " + producto1.detalle + `\nQue cantidad desea comprar`);
-                            alert(producto1.multiplicacion);
-            break;
-        case 2: producto2.seleccion2 = prompt("Usted selecciono: " + producto2.detalle + `\nQue cantidad desea comprar`);
-                            alert(producto2.multiplicacion);
-            break;
-        case 3: producto3.seleccion2 = prompt("Usted selecciono: " + producto3.detalle + `\nQue cantidad desea comprar`);
-                            alert(producto3.multiplicacion);
-            break;
-        case 4: producto4.seleccion2 = prompt("Usted selecciono: " + producto4.detalle + `\nQue cantidad desea comprar`);
-                            alert(producto4.multiplicacion);
-            break;
-    }
+
+while( seleccion1 !=``){
+let = seleccion2 = ``;
+         if(seleccion1 ==`1`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto1.detalle + `\nQue cantidad desea comprar`))}
+    else if(seleccion1 ==`2`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto2.detalle + `\nQue cantidad desea comprar`))}
+    else if(seleccion1 ==`3`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto3.detalle + `\nQue cantidad desea comprar`))}
+    else if(seleccion1 ==`4`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto4.detalle + `\nQue cantidad desea comprar`))}
+
+
+ if(seleccion2 !=``){
+    function multiplicacion(numero1,numero2){
+        let resultado = parseFloat(numero1 * numero2)
+        return resultado}
+    alert(`El monto es de $`+multiplicacion(seleccion2,this.precio))
+ }
 }
-
-
-
-
-
-
-
-
 }
