@@ -18,7 +18,8 @@ function tienda() {
 
 let consultaCompra = prompt("Desea realizar una compra?");
 let = seleccion1 = ``;
-
+let = seleccion2 = ``;
+let = seleccion3 = ``;
 
 if(consultaCompra ==`si`){
     alert("Bienvenido a Glamping \n Tienda de Camping y pesca");
@@ -29,20 +30,30 @@ if(consultaCompra ==`si`){
     alert("Muchas gracias por su compra");
 }
 
+while(seleccion1 !=``){
+    const multiplicacion = (numero1 , numero2) => numero1 * numero2 ;
 
-while( seleccion1 !=``){
-let = seleccion2 = ``;
-         if(seleccion1 ==`1`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto1.detalle + `\nQue cantidad desea comprar`))}
-    else if(seleccion1 ==`2`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto2.detalle + `\nQue cantidad desea comprar`))}
-    else if(seleccion1 ==`3`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto3.detalle + `\nQue cantidad desea comprar`))}
-    else if(seleccion1 ==`4`) {seleccion2 = parseInt(prompt("Usted selecciono: " + producto4.detalle + `\nQue cantidad desea comprar`))}
-
-
- if(seleccion2 !=``){
-    function multiplicacion(numero1,numero2){
-        let resultado = parseFloat(numero1 * numero2)
-        return resultado}
-    alert(`El monto es de $`+multiplicacion(seleccion2,this.precio))
- }
+    switch(seleccion1){
+        case 1: seleccion2 = parseInt(prompt("Usted selecciono: " + producto1.detalle + `\nQue cantidad desea comprar`));
+                alert(`El monto total es $` + multiplicacion(seleccion2,producto1.precio));
+                seleccion3 = prompt(`Desea agregar otro producto?\n1_si\n2_no`);
+            break;
+        case 2: seleccion2 = parseInt(prompt("Usted selecciono: " + producto2.detalle + `\nQue cantidad desea comprar`));
+                alert(`El monto total es $` + multiplicacion(seleccion2,producto2.precio));
+                seleccion3 = prompt(`Desea agregar otro producto?\n1_si\n2_no`);
+            break;
+        case 3: seleccion2 = parseInt(prompt("Usted selecciono: " + producto3.detalle + `\nQue cantidad desea comprar`));
+                alert(`El monto total es $` + multiplicacion(seleccion2,producto3.precio));
+                seleccion3 = prompt(`Desea agregar otro producto?\n1_si\n2_no`);
+            break;
+        case 4: seleccion2 = parseInt(prompt("Usted selecciono: " + producto4.detalle + `\nQue cantidad desea comprar`));
+                alert(`El monto total es $` + multiplicacion(seleccion2,producto4.precio));
+                seleccion3 = prompt(`Desea agregar otro producto?\n1_si\n2_no`);
+            break;
+    }
 }
+
+
+
 }
+
