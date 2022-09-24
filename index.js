@@ -19,14 +19,17 @@ function tienda() {
                 break;
             case 0: alert(`Muchas gracias por su visita`);
                 break;
+            default:
+                break;
         }
     }
+
+
 }
 let = seleccion1 = ``;  // LISTADO DE PRODUCTOS Y SELECCION
 let = seleccion2 = ``;  // SELECCIONA CANTIDAD DE UN ARTICULO QUE DESEA
 let = resultadoX = ``;  // EL RESULTADO DE LA CANTIDAD DESEADA
 let = seleccion3 = ``;  // SI DESEA OTRO ARTICULO
-let numeroCompra = ``;  // INTENTANDO HACER UNA MEMORIA DE COMPRA
 
 
 function Producto(id,nombre,precio,stock,iva){
@@ -50,18 +53,12 @@ const resta = (numero1 , numero2) => numero1 - numero2;
 const condicionesCase=(product) => {
     seleccion2 = parseInt(prompt("Usted selecciono: " + product.detalle + `\nQue cantidad desea comprar`));
     if((seleccion2>=1)&&(seleccion2<product.stock)){
-        resultadoX = alert(`El monto total es $` + multiplicacion(seleccion2,product.precio));
-        seleccion3 = prompt(`Desea agregar otro producto?\n1_si\n2_no`);
+        resultadoX = alert(`El monto total es $` + parseFloat(multiplicacion(seleccion2,product.precio)));
+        console.log("la cantidad de stock acual es de:" + resta(product.stock,seleccion2));
     }else{alert("La cantidad ingresada es mayor a nuestro stock, por favor seleccione una cantidad menor.");
         condicionesCase(product);
     }
+    alert("muchas gracias por su compra");
+
 }
 
-
-const memoriaDeCompra= () => {
-    for( i = 0; i < seleccion3; i++);{
-        if(seleccion3 =`1`){
-        numeroCompra += console.log(product.detalle + resultadoX)+`\n`
-        }
-    }
-}
