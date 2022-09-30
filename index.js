@@ -54,9 +54,9 @@ const resta = (numero1 , numero2) => numero1 - numero2;
 
 const condicionesCase=(producto) => {
     seleccion2 = parseInt(prompt("Usted selecciono: " + producto.detalle + `\nQue cantidad desea comprar`));
-    if((seleccion2>=1)&&(seleccion2<producto.stock)){
+    if((seleccion2>=1)&&(seleccion2<=producto.stock)){
         resultadoX = alert(`El monto total es $` + parseFloat(multiplicacion(seleccion2,producto.precio)));
-        console.log("la cantidad de stock acual es de:" + resta(producto.stock,seleccion2));
+        console.log("la cantidad de stock actual es de:" + resta(producto.stock,seleccion2));
     }else{alert("La cantidad ingresada es mayor a nuestro stock, por favor seleccione una cantidad menor.");
         condicionesCase(producto);
     }seleccion1 = ``;
