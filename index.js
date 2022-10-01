@@ -1,7 +1,9 @@
 function tienda() {
     let consultaCompra = prompt("Desea realizar una compra?");
     if(consultaCompra ==`si`){
-        seleccion1 = parseInt(prompt(`Contamos con los siguientes productos: \n` + producto1.detalle+`\n`+  producto2.detalle +`\n`+ producto3.detalle +`\n`+ producto4.detalle +`\n`+`0_Si desea salir\n`+ `Por favor seleccione uno: `));
+            for (let i = 0; i < listaProducto.length; i++) {
+                alert(listaProducto[i].nombre +` con un monto de $`+ listaProducto[i].precio);
+        }
     } else if(consultaCompra == `no`){
         alert("Muchas gracias por su visita");
     }
@@ -18,8 +20,6 @@ function tienda() {
             case 4: condicionesCase(producto4);
                 break;
             case 0: alert(`Muchas gracias por su visita`);
-                break;
-            default:
                 break;
         }
     }
@@ -42,10 +42,11 @@ class Productos{
     this.detalle = this.id +`__ `+ this.nombre +` con un valor de$`+ this.precio +` contamos con un stock de: ` + this.stock;
 }
 }
-const producto1 = new Productos(`1`,`Carpa canadiese 6 personas`,165035,15,1.21);
-const producto2 = new Productos(`2`,`Linterna Spinit HL800R Frontal/Mano`,6198.1,30,1.21);
-const producto3 = new Productos(`3`,`Navaja Trento Hunter Light 1.20`,6500,50,1.21); 
-const producto4 = new Productos(`4`,`Mochila Bamboo Adventure 70 Lts`,45000,53,1.21);
+const listaProducto =[]
+listaProducto.push(new Productos(`1`,`Carpa canadiese 6 personas`,165035,15,1.21));
+listaProducto.push(new Productos(`2`,`Linterna Spinit HL800R Frontal/Mano`,6198.1,30,1.21));
+listaProducto.push(new Productos(`3`,`Navaja Trento Hunter Light 1.20`,6500,50,1.21));
+listaProducto.push(new Productos(`4`,`Mochila Bamboo Adventure 70 Lts`,45000,53,1.21));
 
 
 const multiplicacion = (numero1 , numero2) => numero1 * numero2;
@@ -61,7 +62,7 @@ const condicionesCase=(producto) => {
         condicionesCase(producto);
     }seleccion1 = ``;
     alert("muchas gracias por su compra");
-
 }
 
-                                     
+
+        // seleccion1 = parseInt(prompt(`Contamos con los siguientes productos: \n` + producto1.detalle+`\n`+  producto2.detalle +`\n`+ producto3.detalle +`\n`+ producto4.detalle +`\n`+`0_Si desea salir\n`+ `Por favor seleccione uno: `));
