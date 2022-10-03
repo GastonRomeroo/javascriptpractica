@@ -3,15 +3,19 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Ubuntu';
-    background-image: url(./img/1663196678953.png);
-    background-repeat: space;
+
+}
+*
+{    background-image: url(./img/1663196678953.png);
+    object-fit: fill;
 }
 
 .text-title {    
     display: flex;
+    flex-direction: column;
     justify-content: center;  
+    align-items: center;
     color: #fff;
     font-size: 80px;
     font-weight: bold;

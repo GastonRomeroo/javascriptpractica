@@ -1,9 +1,7 @@
 function tienda() {
-    let consultaCompra = prompt("Desea realizar una compra?");
+    let consultaCompra = prompt("Desea realizar una compra?").toLowerCase();
     if(consultaCompra ==`si`){
-            for (let i = 0; i < listaProducto.length; i++) {
-                alert(listaProducto[i].nombre +` con un monto de $`+ listaProducto[i].precio);
-        }
+
     } else if(consultaCompra == `no`){
         alert("Muchas gracias por su visita");
     }
@@ -66,3 +64,15 @@ const condicionesCase=(producto) => {
 
 
         // seleccion1 = parseInt(prompt(`Contamos con los siguientes productos: \n` + producto1.detalle+`\n`+  producto2.detalle +`\n`+ producto3.detalle +`\n`+ producto4.detalle +`\n`+`0_Si desea salir\n`+ `Por favor seleccione uno: `));
+
+
+
+    //     for (let i = 0; i < listaProducto.length; i++) {
+    //         alert(`${i + 1}. ${listaProducto[i].nombre} CON UN VALOR DE $${listaProducto[i].precio}`);
+    //  }
+
+
+    // listaProducto.forEach( (producto.id)=> {
+    //     console.log(producto.id)
+
+
