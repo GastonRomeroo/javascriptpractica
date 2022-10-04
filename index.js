@@ -67,9 +67,9 @@ const condicionesCase=(producto) => {
 
 
 
-    //     for (let i = 0; i < listaProducto.length; i++) {
-    //         alert(`${i + 1}. ${listaProducto[i].nombre} CON UN VALOR DE $${listaProducto[i].precio}`);
-    //  }
+        for (let i = 0; i < listaProducto.length; i++) {
+            alert(`${i + 1}. ${listaProducto[i].nombre} CON UN VALOR DE $${listaProducto[i].precio}`);
+     }
 
 
     // listaProducto.forEach( (producto.id)=> {
