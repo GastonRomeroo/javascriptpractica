@@ -47,9 +47,10 @@ listaProducto.push(new Productos(`3`,`Navaja Trento Hunter Light 1.20`,6500,50,1
 listaProducto.push(new Productos(`4`,`Mochila Bamboo Adventure 70 Lts`,45000,53,1.21));
 
 
-const multiplicacion = (numero1 , numero2) => numero1 * numero2;
+const multiplicacion = (numero1 , numero2) => numero1 * numero2; //Porque quiero multiplicar un numero
+const resta = (numero1 , numero2) => numero1 - numero2;     //Porque quiero restar un numero
 
-const resta = (numero1 , numero2) => numero1 - numero2;
+
 
 const condicionesCase=(producto) => {
     seleccion2 = parseInt(prompt("Usted selecciono: " + producto.detalle + `\nQue cantidad desea comprar`));
@@ -69,10 +70,12 @@ const condicionesCase=(producto) => {
 
         for (let i = 0; i < listaProducto.length; i++) {
             alert(`${i + 1}. ${listaProducto[i].nombre} CON UN VALOR DE $${listaProducto[i].precio}`);
-     }
+        }
 
 
     // listaProducto.forEach( (producto.id)=> {
     //     console.log(producto.id)
+
+
 
 
