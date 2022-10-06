@@ -1,21 +1,24 @@
 function tienda() {
+ 
     let consultaCompra = prompt("Desea realizar una compra?").toLowerCase();
-    if(consultaCompra ==`si`){
-
-    } else if(consultaCompra == `no`){
+    if(consultaCompra ==`si`)
+    {
+        seleccion1 = parseInt(prompt(`${listadoNombresProductos.join(`\n`)}`) );
+    }
+    
+    else if(consultaCompra == `no`){
         alert("Muchas gracias por su visita");
     }
 
-    
-    while(seleccion1 !=``){
+    while(seleccion1 != ``){
         switch(seleccion1){
-            case 1: condicionesCase(producto1);
+            case 1: condicionesCase(listaProductoStock);
                 break;
-            case 2: condicionesCase(producto2);
+            case 2: condicionesCase(listaProductoStock);
                 break;
-            case 3: condicionesCase(producto3);
+            case 3: condicionesCase(listaProductoStock);
                 break;
-            case 4: condicionesCase(producto4);
+            case 4: condicionesCase(listaProductoStock);
                 break;
             case 0: alert(`Muchas gracias por su visita`);
                 break;
@@ -24,6 +27,8 @@ function tienda() {
 
 
 }
+
+
 let = seleccion1 = ``;  // LISTADO DE PRODUCTOS Y SELECCION
 let = seleccion2 = ``;  // SELECCIONA CANTIDAD DE UN ARTICULO QUE DESEA
 let = seleccion3 = ``;  // SI DESEA OTRO ARTICULO
@@ -39,6 +44,7 @@ class Productos{
     this.iva = parseFloat(iva);
     this.detalle = this.id +`__ `+ this.nombre +` con un valor de$`+ this.precio +` contamos con un stock de: ` + this.stock;
 }
+
 }
 const listaProducto =[]
 listaProducto.push(new Productos(`1`,`Carpa canadiese 6 personas`,165035,15,1.21));
@@ -50,6 +56,15 @@ listaProducto.push(new Productos(`4`,`Mochila Bamboo Adventure 70 Lts`,45000,53,
 const multiplicacion = (numero1 , numero2) => numero1 * numero2; //Porque quiero multiplicar un numero
 const resta = (numero1 , numero2) => numero1 - numero2;     //Porque quiero restar un numero
 
+   let = listaProductoStock = listaProducto.filter((prod) => prod.stock > 0);
+    console.log(listaProductoStock);
+
+    let = listadoNombresProductos = listaProductoStock.map((prod) => prod.nombre);
+    console.log(listadoNombresProductos);
+
+    let = listadoNombresID = listaProductoStock.map((prod) => prod.id);
+    console.log(listadoNombresID);
+    
 
 
 const condicionesCase=(producto) => {
@@ -64,17 +79,8 @@ const condicionesCase=(producto) => {
 }
 
 
-        // seleccion1 = parseInt(prompt(`Contamos con los siguientes productos: \n` + producto1.detalle+`\n`+  producto2.detalle +`\n`+ producto3.detalle +`\n`+ producto4.detalle +`\n`+`0_Si desea salir\n`+ `Por favor seleccione uno: `));
 
 
-
-        for (let i = 0; i < listaProducto.length; i++) {
-            alert(`${i + 1}. ${listaProducto[i].nombre} CON UN VALOR DE $${listaProducto[i].precio}`);
-        }
-
-
-    // listaProducto.forEach( (producto.id)=> {
-    //     console.log(producto.id)
 
 
 
