@@ -1,5 +1,5 @@
 function tienda() {
-    console.log(randomId(50));
+
     let consultaCompra = prompt("Desea realizar una compra?").toLowerCase();
     if(consultaCompra ==`si`){
         seleccion1 = parseInt(prompt(`${listadoNombresProductos.join(`\n`)}`) );
@@ -7,7 +7,9 @@ function tienda() {
         alert("Muchas gracias por su visita");
     }
 
-    switch(seleccion1){
+
+while(seleccion1 != `5`){
+    switch(seleccion1){ //TENGO QUE REEMPLAZAR ESTE SWITCH YA QUE NO CUMPLE CON MIS NECESIDADES.
         case 1: condicionesCase(listaProducto[0]);
             break;
         case 2: condicionesCase(listaProducto[1]);
@@ -22,7 +24,7 @@ function tienda() {
             break;
         }
 }
-
+}
 let = seleccion1 = ``;  // LISTADO DE PRODUCTOS Y SELECCION
 let = seleccion2 = ``;  // SELECCIONA CANTIDAD DE UN ARTICULO QUE DESEA
 let = seleccion3 = ``;  // SI DESEA OTRO ARTICULO
@@ -38,26 +40,14 @@ class Productos{
     this.iva = parseFloat(iva);
     this.detalle = this.id +`__ `+ this.nombre +` con un valor de$`+ this.precio +` contamos con un stock de: ` + this.stock;
 }
-// const = randomId = (id) => {
-//     let result = ''
-//     const stringLetras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-//     for (let i = 0; i < id; i++ ) {
-//       result += stringLetras.charAt(Math.floor(Math.random() * stringLetras.length));
-//    }
-//    return result;
-
-// }
-
-
-
 
 
 }
-const listaProducto =[]
-listaProducto.push(new Productos(`Carpa canadiese 6 personas`,165035,15,1.21,));
-listaProducto.push(new Productos(`Linterna Spinit HL800R Frontal/Mano`,6198.1,30,1.21,));
-listaProducto.push(new Productos(`Navaja Trento Hunter Light 1.20`,6500,50,1.21,));
-listaProducto.push(new Productos(`Mochila Bamboo Adventure 70 Lts`,45000,53,1.21,));
+const listaProducto =[] //TRABAJANDO EN EL LISTADO DE PRODUCTOS EN UN ARRAY
+listaProducto.push(new Productos(`Carpa canadiese 6 personas`,165035,15,1.21,1));
+listaProducto.push(new Productos(`Linterna Spinit HL800R Frontal/Mano`,6198.1,30,1.21,2));
+listaProducto.push(new Productos(`Navaja Trento Hunter Light 1.20`,6500,50,1.21,3));
+listaProducto.push(new Productos(`Mochila Bamboo Adventure 70 Lts`,45000,53,1.21,4));
 
 
 const multiplicacion = (numero1 , numero2) => numero1 * numero2; //Porque quiero multiplicar un numero
@@ -83,13 +73,27 @@ const condicionesCase=(producto) => {
 
     }else{alert("La cantidad ingresada es mayor a nuestro stock, por favor seleccione una cantidad menor.");
         condicionesCase(producto);
-
-    }seleccion1 = 0 ;
+    }
+    // }seleccion1 = 0 ;
     alert("muchas gracias por su compra");
 }
 
 
 
+
+// CODIGOS PARA SEGUIR ANALIZANDO
+/*
+const = randomId = (id) => {
+    let result = ''
+    const stringLetras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    for (let i = 0; i < id; i++ ) {
+      result += stringLetras.charAt(Math.floor(Math.random() * stringLetras.length));
+          console.log(randomId(50));
+   }
+   return result;
+
+}
+*/
 
 
 
